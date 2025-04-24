@@ -1,4 +1,3 @@
-
 const experiences = [
   {
     title: "Développeur logiciels",
@@ -7,8 +6,8 @@ const experiences = [
     period: "01/2025 – Actuel",
     responsibilities: [
       "Adaptation aux différentes plateformes (mobiles, tablettes, ordinateurs)",
-      "Participation à des projets de transformation digitale"
-    ]
+      "Participation à des projets de transformation digitale",
+    ],
   },
   {
     title: "Développeur full stack",
@@ -19,8 +18,8 @@ const experiences = [
       "Développement d'applications web en JavaScript, HTML et CSS",
       "Conception de bases de données relationnelles et non relationnelles",
       "Documentation technique, analyse des besoins, conception back-end/front-end",
-      "Mise en œuvre d'API RESTful"
-    ]
+      "Mise en œuvre d'API RESTful",
+    ],
   },
   {
     title: "Développeur Web",
@@ -29,14 +28,17 @@ const experiences = [
     period: "04/2023 – 06/2023",
     responsibilities: [
       "Développement d'interfaces web avec VueJS et TailwindCSS",
-      "Utilisation de Git, correction d'erreurs, maintenance de sites web responsives"
-    ]
-  }
+      "Utilisation de Git, correction d'erreurs, maintenance de sites web responsives",
+    ],
+  },
 ];
 
 const Experience = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-white to-purple-50" id="experience">
+    <section
+      className="px-8 py-20 bg-gradient-to-br from-white to-purple-50"
+      id="experience"
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-12">
           Expérience
