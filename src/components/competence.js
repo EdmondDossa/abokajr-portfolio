@@ -2,15 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../App.css';
-import Line from '../assets/images/line.svg';
-import Langage from '../assets/images/langage_icon.svg';
-import Framework from '../assets/images/framework_icon.svg';
-import Cms from '../assets/images/cms_icon.svg';
-import ImagePhp from '../assets/images/logo_php.svg';
-import ImageJs from '../assets/images/javascript.svg';
-import ImageJava from '../assets/images/java.svg';
-import ImagePython from '../assets/images/python.svg';
-import ImageDart from '../assets/images/dart.svg';
+import { Line, Langage, Framework, Cms, ImagePhp, ImageJs, ImageJava, ImagePython, ImageDart } from '../assets/index';
 //import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -18,17 +10,17 @@ function Competence({ percentage }) {
     const [isTableLangage, setIsTableLangage] = useState(true);
     const [isTableFramework, setIsTableFramework] = useState(false);
     const [isTableCms, setIsTableCms] = useState(false);
-    const showLangage = () =>{
+    const showLangage = () => {
         setIsTableLangage(true);
         setIsTableFramework(false);
         setIsTableCms(false)
     };
-    const showFramework = () =>{
+    const showFramework = () => {
         setIsTableLangage(false);
         setIsTableFramework(true);
         setIsTableCms(false)
     };
-    const showCms = () =>{
+    const showCms = () => {
         setIsTableLangage(false);
         setIsTableFramework(false);
         setIsTableCms(true)
@@ -55,61 +47,61 @@ function Competence({ percentage }) {
 
     const customStylesPhp = {
         path: {
-          stroke: '#F57F20',
-          transform: 'rotate(55deg) translateY(-61%) translateX(20%)',
+            stroke: '#F57F20',
+            transform: 'rotate(55deg) translateY(-61%) translateX(20%)',
         },
         text: {
-          fill: '#F57F20', 
-          fontSize: '28px',
+            fill: '#F57F20',
+            fontSize: '28px',
         },
     }
     const customStylesJs = {
         path: {
-          stroke: '#F57F20',
-          transform: 'rotate(58deg) translateY(-65%) translateX(19%)',
+            stroke: '#F57F20',
+            transform: 'rotate(58deg) translateY(-65%) translateX(19%)',
         },
         text: {
-          fill: '#F57F20', 
-          fontSize: '28px',
+            fill: '#F57F20',
+            fontSize: '28px',
         },
     }
     const customStylesJava = {
         path: {
-          stroke: '#F57F20',
-          transform: 'rotate(90deg) translateY(-100%) translateX(1%)',
+            stroke: '#F57F20',
+            transform: 'rotate(90deg) translateY(-100%) translateX(1%)',
         },
         text: {
-          fill: '#F57F20', 
-          fontSize: '28px',
+            fill: '#F57F20',
+            fontSize: '28px',
         },
     }
     const customStylesPython = {
         path: {
-          stroke: '#F57F20',
-          transform: 'rotate(108deg) translateY(-115%) translateX(-18%)',
+            stroke: '#F57F20',
+            transform: 'rotate(108deg) translateY(-115%) translateX(-18%)',
         },
         text: {
-          fill: '#F57F20', 
-          fontSize: '28px',
+            fill: '#F57F20',
+            fontSize: '28px',
         },
     }
     const customStylesDart = {
         path: {
-          stroke: '#F57F20',
-          transform: 'rotate(108deg) translateY(-115%) translateX(-18%)',
+            stroke: '#F57F20',
+            transform: 'rotate(108deg) translateY(-115%) translateX(-18%)',
         },
         text: {
-          fill: '#F57F20', 
-          fontSize: '28px',
+            fill: '#F57F20',
+            fontSize: '28px',
         },
     }
     return (
         <div className="px-10 py-10" id="competence">
             <div className="flex flex-col justify-center items-center">
                 <span className="text-center text-[35px] lg:text-[45px] font-bold uppercase">Compétence</span>
-                <img src={Line} alt='' className="w-16 lg:w-20"/>
+                <img src={Line} alt='' className="w-16 lg:w-20" />
             </div>
-            
+
             <div className={`py-14 lg:py-10 lg:px-10 lg:flex ${isVisible ? 'fade-in' : 'fade-out'}`}>
                 <div className="grid grid-cols-3 gap-x-12 md:pl-6 lg:pl-0 lg:gap-x-0 lg:grid-cols-2 w-full lg:w-[50%] lg:space-x-8">
                     <div className="">
@@ -118,9 +110,9 @@ function Competence({ percentage }) {
                                 Langage
                             </button>
                         </Link>
-                        <img 
-                            src={Langage} 
-                            alt="" 
+                        <img
+                            src={Langage}
+                            alt=""
                             className="w-8 lg:w-12 -translate-x-4 -translate-y-14 lg:-translate-y-10 lg:translate-x-2"
                         />
                     </div>
@@ -130,9 +122,9 @@ function Competence({ percentage }) {
                                 Framework
                             </button>
                         </Link>
-                        <img 
-                            src={Framework} 
-                            alt="" 
+                        <img
+                            src={Framework}
+                            alt=""
                             className="w-9 lg:w-14 -translate-x-4 -translate-y-14 lg:-translate-y-10 lg:translate-x-2"
                         />
                     </div>
@@ -143,9 +135,9 @@ function Competence({ percentage }) {
                                 Cms
                             </button>
                         </Link>
-                        <img 
-                            src={Cms} 
-                            alt="" 
+                        <img
+                            src={Cms}
+                            alt=""
                             className="w-8 lg:w-12 -translate-x-4 -translate-y-14 lg:-translate-y-10 lg:-translate-x-6"
                         />
                     </div>
@@ -158,12 +150,12 @@ function Competence({ percentage }) {
                         <div className="grid grid-cols-3 gap-10 lg:gap-12 p-4 lg:px-14 pb-12 border-solid border-t-0 border-r-[1px] border-l-[1px] border-b-[1px] border-[#F57F20] rounded-b-lg">
                             <div className="relative">
                                 <div className="w-16 p-3.5 lg:px-4 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImagePhp} 
-                                        alt="" 
+                                    <img
+                                        src={ImagePhp}
+                                        alt=""
                                         className="w-full lg:w-12"
                                     />
-                                    
+
                                 </div>
                                 <div className="w-8 -translate-y-4 translate-x-12 lg:translate-x-16 bg-[#fff8ef]">
                                     <CircularProgressbar value={85} text={`${85}%`} styles={customStylesPhp} />
@@ -171,9 +163,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-3.5 px-4 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageJs} 
-                                        alt="" 
+                                    <img
+                                        src={ImageJs}
+                                        alt=""
                                         className="w-full lg:w-11"
                                     />
                                 </div>
@@ -183,9 +175,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-14 p-2 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageJava} 
-                                        alt="" 
+                                    <img
+                                        src={ImageJava}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -195,9 +187,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-3 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImagePython} 
-                                        alt="" 
+                                    <img
+                                        src={ImagePython}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -207,9 +199,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-2.5 py-3.5 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageDart} 
-                                        alt="" 
+                                    <img
+                                        src={ImageDart}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -219,7 +211,7 @@ function Competence({ percentage }) {
                             </div>
                         </div>
                     </div>
-                )} 
+                )}
                 {isTableFramework && !isTableLangage && !isTableCms && (
                     <div className="w-full lg:w-[50%] p-4 animate-slide-up">
                         <div className="text-[#F57F20] text-[15px] lg:text-[18px] p-2 px-8 border-solid border-[1px] border-[#F57F20] rounded-t-lg">
@@ -228,12 +220,12 @@ function Competence({ percentage }) {
                         <div className="grid grid-cols-3 gap-10 lg:gap-12 p-4 lg:px-14 pb-12 border-solid border-t-0 border-r-[1px] border-l-[1px] border-b-[1px] border-[#F57F20] rounded-b-lg">
                             <div className="relative">
                                 <div className="w-16 p-3.5 lg:px-4 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImagePhp} 
-                                        alt="" 
+                                    <img
+                                        src={ImagePhp}
+                                        alt=""
                                         className="w-full lg:w-12"
                                     />
-                                    
+
                                 </div>
                                 <div className="w-8 -translate-y-4 translate-x-12 lg:translate-x-16 bg-[#fff8ef]">
                                     <CircularProgressbar value={85} text={`${85}%`} styles={customStylesPhp} />
@@ -241,9 +233,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-3.5 px-4 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageJs} 
-                                        alt="" 
+                                    <img
+                                        src={ImageJs}
+                                        alt=""
                                         className="w-full lg:w-11"
                                     />
                                 </div>
@@ -253,9 +245,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-14 p-2 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageJava} 
-                                        alt="" 
+                                    <img
+                                        src={ImageJava}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -265,9 +257,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-2.5 py-3.5 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageDart} 
-                                        alt="" 
+                                    <img
+                                        src={ImageDart}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -277,7 +269,7 @@ function Competence({ percentage }) {
                             </div>
                         </div>
                     </div>
-                )} 
+                )}
                 {isTableCms && !isTableFramework && !isTableLangage && (
                     <div className="w-full lg:w-[50%] p-4  animate-slide-up">
                         <div className="text-[#F57F20] text-[15px] lg:text-[18px] p-2 px-8 border-solid border-[1px] border-[#F57F20] rounded-t-lg">
@@ -286,12 +278,12 @@ function Competence({ percentage }) {
                         <div className="grid grid-cols-3 gap-10 lg:gap-12 p-4 lg:px-14 pb-12 border-solid border-t-0 border-r-[1px] border-l-[1px] border-b-[1px] border-[#F57F20] rounded-b-lg">
                             <div className="relative">
                                 <div className="w-16 p-3.5 lg:px-4 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImagePhp} 
-                                        alt="" 
+                                    <img
+                                        src={ImagePhp}
+                                        alt=""
                                         className="w-full lg:w-12"
                                     />
-                                    
+
                                 </div>
                                 <div className="w-8 -translate-y-4 translate-x-12 lg:translate-x-16 bg-[#fff8ef]">
                                     <CircularProgressbar value={85} text={`${85}%`} styles={customStylesPhp} />
@@ -299,9 +291,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-3.5 px-4 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageJs} 
-                                        alt="" 
+                                    <img
+                                        src={ImageJs}
+                                        alt=""
                                         className="w-full lg:w-11"
                                     />
                                 </div>
@@ -311,9 +303,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-14 p-2 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImageJava} 
-                                        alt="" 
+                                    <img
+                                        src={ImageJava}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -323,9 +315,9 @@ function Competence({ percentage }) {
                             </div>
                             <div className="relative">
                                 <div className="w-16 p-3 lg:w-fit h-fit border-solid border-[1px] border-[#F57F20] rounded-lg">
-                                    <img 
-                                        src={ImagePython} 
-                                        alt="" 
+                                    <img
+                                        src={ImagePython}
+                                        alt=""
                                         className="w-full lg:w-14"
                                     />
                                 </div>
@@ -335,12 +327,11 @@ function Competence({ percentage }) {
                             </div>
                         </div>
                     </div>
-                )} 
+                )}
 
             </div>
-      </div>
+        </div>
     );
-  }
-  
-  export default Competence;
-  
+}
+
+export default Competence;

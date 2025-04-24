@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HashLink as Link } from 'react-router-hash-link';
-import logo from '../assets/images/logo-abj_1.svg';
+import { Logo } from '../assets/index';
 
 function Header() {
   const [activeButton, setActiveButton] = useState('');
@@ -26,7 +26,7 @@ function Header() {
     <header className="flex px-8 py-8 sticky h-28 top-0 bg-gradient-to-r from-orange-100 to-white md:bg-gradient-to-r from-orange-100 to-white lg:bg-gradient-to-r from-orange-100 to-white z-10 animate-slide-in header">
       <div className="w-[190px] -translate-y-10 logo">
         <Link smooth={true} to="#accueil">
-          <img src={logo} alt="logo" className="w-full" />
+          <img src={Logo} alt="logo" className="w-full" />
         </Link>
       </div>
       <nav className="flex justify-between px-12" ref={navRef}>
