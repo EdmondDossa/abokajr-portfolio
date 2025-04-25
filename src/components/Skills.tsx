@@ -1,32 +1,38 @@
-
 import { playClickSound } from "../utils/sounds";
+import frontendImg from "@/assets/images/im_frontend-code-screen.jpeg";
+import backendImg from "@/assets/images/im_backend-code-screen.jpeg";
+import mobileImg from "@/assets/images/im_mobile-code-screen.jpeg";
+import otherImg from "@/assets/images/im_autres.jpeg";
 
 const skillCategories = [
   {
     title: "Développement Front-end",
     skills: ["VueJS", "ReactJS", "NextJS", "TypeScript", "TailwindCSS"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    image: frontendImg,
   },
   {
     title: "Développement Back-end",
     skills: ["Laravel", "Symfony", "NestJS", "AdonisJS", "API RESTful"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    image: backendImg,
   },
   {
     title: "Développement Mobile",
     skills: ["Flutter", "ReactNative", "Android"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    image: mobileImg,
   },
   {
     title: "Autres",
     skills: ["Git", "Python", "Java", "SQL", "Travail en équipe"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-  }
+    image: otherImg,
+  },
 ];
 
 const Skills = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50" id="skills">
+    <section
+      className="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
+      id="skills"
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-12 animate-pulse">
           Compétences
