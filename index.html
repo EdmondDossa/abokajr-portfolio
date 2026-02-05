@@ -1,15 +1,83 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marie Edmond DOSSA HEGNON - Portfolio</title>
-  </head>
+    <title>ABJ | ABOKA JR | PROTOCOL V2.5.0</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 25V75' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M30 75L48 25' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M48 25C65 25 65 43 48 43' stroke='%236366f1' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M48 43C65 43 65 61 48 61' stroke='%236366f1' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M48 75C48 85 30 85 25 75' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #050508;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bg);
+        color: #e2e8f0;
+        overflow-x: hidden;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #ffffff 0%, #6366f1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Custom futuriste scrollbar */
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #0d0d12; }
+      ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 10px; }
+      
+      /* HUD CRT Lines Overlay */
+      body::after {
+        content: " ";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        z-index: 1000;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+        opacity: 0.1;
+      }
+
+      /* Glitch Effect placeholder if needed */
+      .glitch-hover:hover {
+        animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
+      }
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0?external=react",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?external=react,react-dom",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
   <body>
     <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <script type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
