@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #0a0a0b;
+  --color-surface: #111113;
+  --color-raised: #17171a;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-fg: #ededef;
+  --color-muted: #9b9ba4;
+  --color-faint: #80808a;
+  --color-accent: #c6f16d;
+  --color-accent-deep: #9fd33a;
+
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-glow-spin: glow-spin 6s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes glow-spin {
+    to {
+      --glow-angle: 360deg;
+    }
+  }
+}
+
+@property --glow-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+[role='button'],
+[role='tab'] {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Grain léger sur tout le site pour casser l'aplat du fond. */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/*
+ * Glow border (inspiré du composant « Glow Border » d'Originkit) :
+ * un dégradé conique tourne derrière le cadre et un masque le réduit à un
+ * anneau, si bien qu'une traînée de lumière parcourt le contour.
+ */
+.glow-border {
+  position: relative;
+  isolation: isolate;
+}
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0deg 250deg,
+    rgb(198 241 109 / 0.15) 290deg,
+    var(--color-accent) 340deg,
+    #ffffff 355deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: var(--animate-glow-spin);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

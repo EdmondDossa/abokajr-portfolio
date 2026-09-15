@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Marie Edmond DOSSA HEGNON — CV Développeur Full Stack Web &amp; Mobile</title>
+    <meta name="author" content="Marie Edmond DOSSA HEGNON" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Mise en page reprise du modèle FlowCV : bandeaux gris, titres bleu marine, dates à gauche. */
+      @page {
+        size: A4;
+        margin: 13mm 14mm 12mm;
+      }
+      :root {
+        --navy: #042a3f;
+        --band: #edeff1;
+        --text: #000000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: 'Source Sans 3', 'Source Sans Pro', Arial, sans-serif;
+        font-size: 10.2pt;
+        line-height: 1.34;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p {
+        margin: 0;
+      }
+
+      /* En-tête */
+      .name {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0 4mm;
+        margin: 0;
+        color: var(--navy);
+      }
+      .name h1 {
+        margin: 0;
+        font-size: 21pt;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+      .name span {
+        font-size: 13.5pt;
+        font-style: italic;
+      }
+      .contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.8mm 8mm;
+        margin: 3.4mm 0 0;
+        padding: 0;
+        list-style: none;
+        font-size: 10.2pt;
+      }
+      .contacts li {
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+        margin: 0;
+      }
+      .icon {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 5.4mm;
+        height: 5.4mm;
+        border: 0.8pt solid #000;
+        border-radius: 0.8mm;
+      }
+      .icon svg {
+        width: 3.2mm;
+        height: 3.2mm;
+      }
+
+      /* Sections */
+      section {
+        margin-top: 6.5mm;
+      }
+      h2 {
+        margin: 0 0 3.4mm;
+        padding: 1.3mm 0;
+        background: var(--band);
+        color: var(--navy);
+        font-size: 12.5pt;
+        font-weight: 700;
+        text-align: center;
+        break-after: avoid;
+      }
+      .entry {
+        display: grid;
+        grid-template-columns: 42mm 1fr;
+        margin-top: 4mm;
+        break-inside: avoid;
+      }
+      h2 + .entry {
+        margin-top: 0;
+      }
+      .when {
+        color: var(--navy);
+      }
+      .where {
+        display: block;
+        color: var(--text);
+      }
+      h3 {
+        margin: 0;
+        font-size: 10.2pt;
+        font-weight: 400;
+      }
+      h3 b {
+        font-weight: 700;
+      }
+      .link {
+        display: inline-block;
+        width: 2.8mm;
+        height: 2.8mm;
+        margin: 0 0.6mm 0 1mm;
+        vertical-align: -0.2mm;
+      }
+      .link svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      ul {
+        margin: 0.6mm 0 0;
+        padding: 0 0 0 4mm;
+      }
+      li {
+        margin-top: 0.8mm;
+      }
+      .desc {
+        margin-top: 0.6mm;
+      }
+      .tech {
+        margin-top: 0.4mm;
+        font-style: italic;
+        color: #3a3a3a;
+      }
+
+      /* Compétences */
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4.2mm 8mm;
+      }
+      .skills b {
+        display: block;
+        font-weight: 700;
+      }
+
+      .inline-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 40mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .inline-list li {
+        margin: 0;
+      }
+      .inline-list li::before {
+        content: '•';
+        margin-right: 1.6mm;
+      }
+      .interests {
+        display: flex;
+        gap: 3mm;
+        align-items: center;
+      }
+      .interests .dot {
+        width: 1.5mm;
+        height: 1.5mm;
+        border-radius: 50%;
+        background: #000;
+      }
+      .page-break {
+        break-before: page;
+        margin-top: 0;
+      }
+      .signature img {
+        display: block;
+        width: 22mm;
+        margin: 2mm 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="name">
+        <h1>Marie Edmond DOSSA HEGNON</h1>
+        <span>Développeur Full Stack Web &amp; Mobile</span>
+      </div>
+      <ul class="contacts">
+        <li>
+          <span class="icon"
+            ><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.3 2 7.7 5.4L19.7 7H4.3ZM20 9l-8 5.6L4 9v8h16V9Z" /></svg
+          ></span>
+          <a href="mailto:marie.edmond.hegnon@gmail.com">marie.edmond.hegnon@gmail.com</a>
+        </li>
+        <li>
+          <span class="icon"
+            ><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.2 2.23Z" /></svg
+          ></span>
+          +229 01 98 46 29 82
+        </li>
+        <li>
+          <span class="icon"
+            ><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" /></svg
+          ></span>
+          Cotonou, Bénin
+        </li>
+        <li>
+          <span class="icon"
+            ><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z" /></svg
+          ></span>
+          <a href="https://www.linkedin.com/in/marie-edmond-dossa-hegnon-037b23333">linkedin.com/in/marie-edmond-dossa-hegnon</a>
+        </li>
+        <li>
+          <span class="icon"
+            ><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 20.86c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3" /></svg
+          ></span>
+          <a href="https://github.com/EdmondDossa">github.com/EdmondDossa</a>
+        </li>
+        <li>
+          <span class="icon"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg
+          ></span>
+          <a href="https://abokajr-portfolio.vercel.app">abokajr-portfolio.vercel.app</a>
+        </li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Profil</h2>
+      <p>
+        Développeur full stack web et mobile avec plus de 3&nbsp;ans d’expérience. Je conçois et livre des applications utilisées en production, de
+        l’analyse du besoin jusqu’au déploiement&nbsp;: apps Shopify et plugins WordPress, API NestJS et Laravel, applications mobiles Flutter et
+        logiciels de bureau. Autonome et rigoureux, je transforme un besoin métier en produit fiable et simple à utiliser.
+      </p>
+    </section>
+
+    <section>
+      <h2>Expérience Professionnelle</h2>
+
+      <div class="entry">
+        <p class="when">07/2023 – aujourd’hui<span class="where">Cotonou, Bénin</span></p>
+        <div>
+          <h3>
+            <b>Vertim Coders</b
+            ><a class="link" href="https://vertimcoders.com" aria-label="vertimcoders.com"
+              ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg></a
+            >, <i>Développeur full stack web &amp; mobile</i>
+          </h3>
+          <ul>
+            <li>Développement des configurateurs d’enseignes de l’entreprise, publiés sur le Shopify App Store et WordPress.org (plus de 5&nbsp;000 téléchargements).</li>
+            <li>Conception d’éditeurs visuels en Vue.js avec aperçu en direct, calcul du prix en temps réel et export des fichiers de fabrication.</li>
+            <li>Création des API et des intégrations e-commerce&nbsp;: WordPress, WooCommerce et application Shopify.</li>
+            <li>Analyse des besoins clients et rédaction du cahier des charges.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="when">02/2025 – aujourd’hui<span class="where">À distance</span></p>
+        <div>
+          <h3><b>Freelance</b>, <i>Développeur full stack</i></h3>
+          <ul>
+            <li>Développement backend d’un SaaS de gestion hôtelière (NestJS).</li>
+            <li>Création d’une application mobile de prise de rendez-vous (Flutter, Laravel).</li>
+            <li>Conception, en binôme, d’une suite de logiciels de gestion scolaire.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="when">03/2023 – 06/2023<span class="where">Cotonou, Bénin</span></p>
+        <div>
+          <h3><b>41 DEVS</b>, <i>Développeur web frontend</i></h3>
+          <p class="desc">Intégration d’interfaces web avec Vue.js et Tailwind CSS, premiers pas en développement mobile avec Flutter.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Compétences</h2>
+      <div class="skills">
+        <p><b>Langages</b>JavaScript, TypeScript, PHP, Dart, Java, Python</p>
+        <p><b>Front-end</b>React, Next.js, Vue.js, Tailwind CSS</p>
+        <p><b>Back-end</b>NestJS, Node.js, Laravel, AdonisJS, API REST</p>
+        <p><b>Mobile &amp; Desktop</b>Flutter, React Native, Electron</p>
+        <p><b>E-commerce &amp; CMS</b>Shopify (apps), WordPress, WooCommerce</p>
+        <p><b>Bases de données</b>PostgreSQL, MySQL, MongoDB, SQLite</p>
+        <p><b>Outils &amp; DevOps</b>Git, Docker, Prisma, Firebase, Vercel</p>
+      </div>
+    </section>
+
+    <section class="page-break">
+      <h2>Projets</h2>
+
+      <div class="entry">
+        <p class="when">02/2025 – aujourd’hui</p>
+        <div>
+          <h3>
+            <b>School Suite</b
+            ><a class="link" href="https://school-cloud-abj.vercel.app" aria-label="school-cloud-abj.vercel.app"
+              ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg></a
+            >, <i>Logiciels de gestion scolaire</i>
+          </h3>
+          <p class="desc">
+            Trois applications reliées pour les écoles&nbsp;: vie scolaire et bulletins, comptabilité, et un espace en ligne où les professeurs saisissent
+            leurs notes. Fonctionne même sans Internet.
+          </p>
+          <p class="tech">Electron, React, SQLite, Next.js, PostgreSQL</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="when">02/2024 – aujourd’hui</p>
+        <div>
+          <h3>
+            <b>All Sign Customizer</b
+            ><a class="link" href="https://allsigncustomizer.com" aria-label="allsigncustomizer.com"
+              ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg></a
+            >, <i>Application Shopify et plugin WooCommerce</i>
+          </h3>
+          <p class="desc">
+            Configurateur d’enseignes sur mesure&nbsp;: le client crée son enseigne en ligne avec le prix en temps réel, le marchand reçoit les fichiers
+            de fabrication. Disponible sur le Shopify App Store.
+          </p>
+          <p class="tech">Vue.js, Fabric.js, Remix, Prisma, PostgreSQL, PHP</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="when">07/2023 – aujourd’hui</p>
+        <div>
+          <h3>
+            <b>Signs Designer</b
+            ><a class="link" href="https://signsdesigner.us" aria-label="signsdesigner.us"
+              ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg></a
+            >, <i>Plateforme de configurateurs d’enseignes</i>
+          </h3>
+          <p class="desc">
+            Configurateur de néons et de lettres lumineuses pour WooCommerce&nbsp;: plus de 40&nbsp;boutiques actives et 3&nbsp;900 téléchargements.
+          </p>
+          <p class="tech">Vue.js, Fabric.js, PHP, WooCommerce</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="when">05/2025 – aujourd’hui</p>
+        <div>
+          <h3>
+            <b>Souaba One</b
+            ><a class="link" href="https://pro.souaba.com" aria-label="pro.souaba.com"
+              ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" /><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" /></svg></a
+            >, <i>SaaS de gestion hôtelière</i>
+          </h3>
+          <p class="desc">
+            Logiciel en ligne pour les hôtels et résidences meublées. Développeur backend principal&nbsp;: réservations, paiements Mobile Money et
+            abonnements.
+          </p>
+          <p class="tech">NestJS, TypeScript, Prisma, PostgreSQL</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="when">08/2025 – aujourd’hui</p>
+        <div>
+          <h3><b>TonBookTout</b>, <i>Application mobile de rendez-vous beauté</i></h3>
+          <p class="desc">
+            Les coiffeurs et esthéticiennes, en salon ou indépendants, reçoivent les réservations de leurs clients. Disponible sur Android, iOS
+            bientôt.
+          </p>
+          <p class="tech">Flutter, Laravel, Firebase</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formation Académique</h2>
+      <div class="entry">
+        <p class="when">10/2024 – 07/2026<span class="where">Cotonou, Bénin</span></p>
+        <h3><b>Master en Architecture Logicielle</b>, <i>ESGIS Bénin</i></h3>
+      </div>
+      <div class="entry">
+        <p class="when">09/2020 – 06/2023<span class="where">Cotonou, Bénin</span></p>
+        <h3><b>Licence Professionnelle en Architecture Logicielle</b>, <i>ESGIS Bénin</i></h3>
+      </div>
+    </section>
+
+    <section>
+      <h2>Langues</h2>
+      <ul class="inline-list">
+        <li>Français</li>
+        <li>Anglais</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Centres d’Intérêt</h2>
+      <p class="interests">Lecture <span class="dot"></span> Sport <span class="dot"></span> Théâtre</p>
+    </section>
+
+    <section class="signature">
+      <h2>Déclaration</h2>
+      <p>Je certifie sur l’honneur que les informations mentionnées dans ce curriculum vitae sont exactes et vérifiables.</p>
+      <img src="signature.png" alt="Signature" />
+      <p><b>DOSSA HEGNON Marie Edmond</b></p>
+    </section>
+  </body>
+</html>

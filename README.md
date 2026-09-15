@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Portfolio · Marie Edmond DOSSA HEGNON
 
-# Run and deploy your AI Studio app
+Portfolio de développeur full stack web & mobile, bilingue (français / anglais) : études de cas des projets avec captures réelles, parcours, compétences et CV téléchargeable.
 
-This contains everything you need to run your app locally.
+En ligne : https://abokajr-portfolio.vercel.app
 
-View your app in AI Studio: https://ai.studio/apps/drive/1I-aSA6J-QRlxUrQcp_i-grY6K7Nq4duh
+## Stack
 
-## Run Locally
+React 19, Vite 6, Tailwind CSS 4 et Framer Motion. Plusieurs animations sont inspirées des composants gratuits d'[Originkit](https://www.originkit.dev/) (Stagger Text Rise, Scroll Text Highlight, Scramble Text, Glow Border, Shine Card, Pulse Grid, Hover Image Reveal), réécrites en version légère sans GSAP ni three.js. Toutes respectent `prefers-reduced-motion`.
 
-**Prerequisites:**  Node.js
+## Commandes
 
+```sh
+npm install
+npm run dev      # serveur de développement sur http://localhost:3000
+npm run build    # build de production dans dist/
+npm run preview  # prévisualise le build
+npm run cv       # régénère public/cv/Marie-Edmond-DOSSA-HEGNON-CV.pdf depuis cv/cv-fr.html (Google Chrome requis)
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Où modifier le contenu
+
+| Fichier | Contenu |
+| --- | --- |
+| `content.ts` | Coordonnées, textes de l'interface, expériences, formation, compétences |
+| `projects.ts` | Projets : accroche, besoin, réalisations, chiffres, stack, liens et galerie de captures |
+| `cv/cv-fr.html` | Source du CV (2 pages A4). Relancer `npm run cv` après modification |
+| `public/projects/<projet>/` | Captures en WebP : `-1200` / `-2400` pour le bureau, `-390` / `-780` pour le mobile |
+
+Pour ajouter une capture, exportez-la dans les deux tailles, au format 16:10 pour le bureau, puis ajoutez une entrée dans la `gallery` du projet dans `projects.ts`.
